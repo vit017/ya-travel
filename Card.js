@@ -5,8 +5,21 @@
  * @property {object} Card.A - Point instance
  * @property {object} Card.B - Point instance
  * @property {object} Card.transport - Transport instance
+ * @throws {TypeError}
  */
 function Card(info) {
+    if (
+           hlp.gettype(info) !== 'object'
+        || !info.hasOwnProperty('A')
+        || !info.hasOwnProperty('B')
+        || !(info.A instanceof Point)
+        || !(info.B instanceof Point)
+        || !info.hasOwnProperty('transport')
+        || !(info.transport instanceof Transport)
+    ) {
+        throw new TypeError('Wrong param');
+    }
+
     this.A = info.A;
     this.B = info.B;
     this.A.next = this.B;

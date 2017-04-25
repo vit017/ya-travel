@@ -8,12 +8,16 @@ function Route() {
 
 /**
  * @param {Object[]|Object} cards - Add cards to route.
+ * @throws {TypeError}
  */
 Route.prototype.addCards = function () {
     var cards = hlp.toArray(arguments),
         that = this;
 
-    cards.forEach(function (c) {
+    cards.forEach(function (c, i) {
+        if (!(c instanceof Card)) {
+            throw new TypeError('Wrong type of Card. Param #' + i);
+        }
         that.cards[that.makeKey(c.A, c.B)] = c;
     });
 };

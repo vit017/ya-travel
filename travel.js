@@ -15,123 +15,123 @@ var p3 = new Point({id: 'q', 'name': 'Place 3'});
 var card6 = new Card({
     A: p1,
     B: p2,
-    transport: {
+    transport: new Transport({
         type: Transport.AIR,
         additional: {
             seats: {name: 'seat', value: 'seat 6'},
             baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card2 = new Card({
     A: p2,
     B: p3,
-    transport: {
+    transport: new Transport({
         type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 22'},
-            baggage: {name: 'baggage2', value: 'you don`t need baggage 2'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card7 = new Card({
     A: p3,
     B: p4,
-    transport: {
-        type: Transport.BUS,
+    transport: new Transport({
+        type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 7'},
-            baggage: {name: 'baggage 7', value: 'you don`t need baggage 7'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card1 = new Card({
     A: p4,
     B: p5,
-    transport: {
-        type: Transport.BUS,
+    transport: new Transport({
+        type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 1'},
-            baggage: {name: 'baggage 1', value: 'you don`t need baggage 1'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card10 = new Card({
     A: p5,
     B: p6,
-    transport: {
-        type: Transport.BUS,
+    transport: new Transport({
+        type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 10'},
-            baggage: {name: 'baggage 10', value: 'you don`t need baggage 10'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card3 = new Card({
     A: p6,
     B: p7,
-    transport: {
-        type: Transport.TRAIN,
+    transport: new Transport({
+        type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 3'},
-            baggage: {name: 'baggage 3', value: 'you don`t need baggage 3'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card11 = new Card({
     A: p7,
     B: p8,
-    transport: {
-        type: Transport.TRAIN,
+    transport: new Transport({
+        type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 11'},
-            baggage: {name: 'baggage 11', value: 'you don`t need baggage 11'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card8 = new Card({
     A: p8,
     B: p9,
-    transport: {
-        type: Transport.TRAIN,
+    transport: new Transport({
+        type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 8'},
-            baggage: {name: 'baggage 8', value: 'you don`t need baggage 8'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card4 = new Card({
     A: p9,
     B: p10,
-    transport: {
+    transport: new Transport({
         type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 4'},
-            baggage: {name: 'baggage 4', value: 'you don`t need baggage 4'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card9 = new Card({
     A: p10,
     B: p11,
-    transport: {
+    transport: new Transport({
         type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 10'},
-            baggage: {name: 'baggage 10', value: 'you don`t need baggage 10'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 var card5 = new Card({
     A: p11,
     B: p12,
-    transport: {
-        type: Transport.BUS,
+    transport: new Transport({
+        type: Transport.AIR,
         additional: {
-            seats: {name: 'seat', value: 'seat 5'},
-            baggage: {name: 'baggage 5', value: 'you don`t need baggage 5'}
+            seats: {name: 'seat', value: 'seat 6'},
+            baggage: {name: 'baggage 6', value: 'you don`t need baggage 6'}
         }
-    }
+    })
 });
 
 var r1 = new Route();

@@ -1,3 +1,6 @@
+function cl() {
+    console.log.apply(console, arguments);
+}
 var hlp = (function () {
     var gettype = function (mix) {
         return Object.prototype.toString.call(mix).slice(8, -1).toLowerCase();

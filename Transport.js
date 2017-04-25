@@ -2,7 +2,9 @@
  * @constructor
  * @this {Transport}
  */
-function Transport() {
+function Transport(info) {
+    this.type = info.type;
+    this.additional = info.additional;
 }
 
 /**
