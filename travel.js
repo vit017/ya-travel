@@ -140,7 +140,7 @@ r1.addCards(card1, card5, card6, card7, card9, card4, card10, card11, card2, car
 
 r1.sort();
 
-cl(r1.info());
+console.log(r1.info());
 
 
 
