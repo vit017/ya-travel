@@ -9,7 +9,8 @@ var hlp = (function() {
     };
 
     var toArray = function (list) {
-        return (list.length === 1 ? [list[0]] : Array.apply(null, list));
+        var ar = (list.length === 1 ? [list[0]] : Array.apply(null, list));
+        return [].concat.apply([], ar);
     };
 
     return {
@@ -28,16 +29,11 @@ var Card = function (info) {
 };
 
 var Route = function () {
-    var args = hlp.toArray(arguments);
-    args = [].concat.apply([], args);
-    this.points = args;
+    this.points = hlp.toArray(arguments);
 };
 
 Route.prototype.addCards = function() {
-    var args = hlp.toArray(arguments);
-    args = [].concat.apply([], args);
-
-    this.cards = args;
+    this.cards = hlp.toArray(arguments);
 };
 
 Route.prototype.sort = function() {
@@ -72,7 +68,7 @@ var r1 = new Route(routePoints);
 
 r1.addCards(card, card2, card3, card4, card5, card6);
 
-r1.sort();
+cl(r1.sort());
 
 
 
