@@ -72,7 +72,7 @@ var r1 = new Route(routePoints);
 
 r1.addCards(card, card2, card3, card4, card5, card6);
 
-cl(r1.sort());
+r1.sort();
 
 
 
