@@ -20,10 +20,6 @@ var hlp = (function () {
 }());
 
 var Card = function (info) {
-    this.id = info.id;
-    this.routeIndex = 0;
-    this.transport = {};
-    this.route = info.route;
     this.A = info.A;
     this.B = info.B;
     info.A.next = info.B;
@@ -31,7 +27,7 @@ var Card = function (info) {
 };
 
 var Route = function () {
-    //this.points = hlp.toArray(arguments);
+    this.cards = {};
 };
 
 var Point = function (id) {
@@ -39,24 +35,46 @@ var Point = function (id) {
 };
 
 Route.prototype.addCards = function () {
-    this.cards = hlp.toArray(arguments);
+    var cards = hlp.toArray(arguments),
+        that = this;
+
+    cards.forEach(function(c) {
+        that.cards[that.makeKey(c.A, c.B)] = c;
+    });
+};
+
+Route.prototype.getCard = function (A, B) {
+    return this.cards[this.makeKey(A, B)];
+};
+
+Route.prototype.makeKey = function (A, B) {
+    return A.id + '.' + B.id;
 };
 
 Route.prototype.sort = function () {
     var
-        card = this.cards[0].A,
+        i = 0,
+        cardsKey = Object.keys(this.cards),
+        point = this.cards[cardsKey[0]].B,
+        sortCards = [],
         middle = [];
 
-    while (card.prev) {
-        middle.unshift(card.prev);
-        card = card.prev;
+    while (point) {
+        middle.unshift(point);
+        point = point.prev;
     }
-    card = middle[middle.length-1];
-    while (card.next) {
-        middle.push(card.next);
-        card = card.next
+
+    point = middle[middle.length - 1];
+    while (point.next) {
+        middle.push(point.next);
+        point = point.next
     }
-    cl(middle)
+
+    for (var l = middle.length;i<l-1;i++) {
+        sortCards.push(this.getCard(middle[i],middle[i+1]));
+    }
+
+    this.cards = sortCards;
 };
 
 var Transport = function () {
@@ -94,11 +112,11 @@ var card5 = new Card({A: p11, B: p12});
 
 var r1 = new Route();
 
-r1.addCards(card1,card5, card6, card7,card9,card4,  card10, card11, card2, card3, card8);
+r1.addCards(card1, card5, card6, card7, card9, card4, card10, card11, card2, card3, card8);
 
 r1.sort();
 
-
+///r1.showRoute()
 
 
 
