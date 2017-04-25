@@ -17,7 +17,7 @@ function Card(info) {
         || !info.hasOwnProperty('transport')
         || !(info.transport instanceof Transport)
     ) {
-        throw new TypeError('Wrong param');
+        throw new TypeError('Card constructor: Wrong param');
     }
 
     this.A = info.A;
